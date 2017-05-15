@@ -52,6 +52,17 @@ $ sudo chmod a+r -R /edx/var/edxapp/staticfiles/example-cid/
 1. 新建github仓库，并建立仓库与edx 的ssh链接，并在github新建目录结构```data/piazza-data``` 和 ```data/piazza-data-filter```
 1. 首先，利用脚本：```mooc-PiazzaXBlock/script/更新一段时间内的数据/upd-data-during-time.py``` 更新一次有所的数据，并把数据保存到github仓库对应的目录下
 1. 然后，把```mooc-PiazzaXBlock/staticfiles/example-together/piazza_together.js``` 文件中的url_github改为你的github仓库链接
+
+如果直接用我们的[github仓库](https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/data)，则步骤如下：
+1. 建立github仓库的ssh连接
+1. 把https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x 仓库clone到edx本地的/mnt/piazza_update目录下
+```
+sudo su
+cd /mnt
+mkdir piazza_update
+git clone git@github.com:xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x.git
+```
+
 1. 最后，设定好每日定时执行
 
   + 
